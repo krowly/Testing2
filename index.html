@@ -1,0 +1,50 @@
+<head> <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="utf-8" http-equiv="encoding"/> <link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+<script
+src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script> 
+  
+<link rel='stylesheet' href='custom.css'></link>
+<link rel='stylesheet' href='css/bootstrap.min.css'></link>	 
+
+<script src="js/bootstrap.min.js"></script> 
+<script src="jq.js"></script> 
+<script>
+$("#body").ready(function() {
+		$('.cusleft').load('Pages/elements/left_bar.html');
+		$('#header-menu').load('Pages/elements/header.html');
+		$('#footer').load('Pages/elements/footer.html');
+        });
+</script>
+</head>
+<body>
+	<div class="cuscont">
+		<div class="row">
+			<div class="col-sm-2 cusleft">
+
+			</div>
+			<div class="col-sm-10 mainstaff	">
+					<div class='row'>
+						<div id="header-menu">
+						</div>
+						<div class="pageTitle"><h1>Места для приема батареек</h1></div>
+						<div class="ccontent">
+									<h2>Для чего собирают батарейки</h2>
+									<p>Люди собирают отработанные источники энергии для спасения природы от загрязнения.</p>
+									<h2>Куда выбрасывать батарейки?</h2>
+									<p>Большинство людей уверены в том, что их нужно выкинуть в мусорное ведро, но это не так. Источники питания требуют специализированной утилизации. Их ликвидация равносильна люминесцентным лампам, которые нужно сдавать в специальные пункты и еще доплачивать. Но к счастью гальванические элемнты принимают бесплатно по следующим адресам!</p>	
+									<div id="mapid"></div>
+									<script src="batdumps.json"></script>
+									<script src="staff.js"></script>
+						</div>
+						<div id="footer">
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</body>

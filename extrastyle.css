@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {background: url(images/cross_bg.jpg) repeat; margin: 0;}
+
+#centerDoc {text-align: left; margin: 0 auto; Width: 982px; Height: auto; top: 0;}
+
+p, h1, h2, h3, h4, h5, a {font: normal 12px Arial, Helvetica, sans-serif;}
+
+img {border: none;}
+
+a {cursor: pointer;}
+
+#header {float: left; clear: left; height: 108px; width: 974px; background-color: #000; border-left: #FFF 8px solid;}
+
+a.logo {float: left; background-color: #FFF; height: 70px; width: 195px; border-bottom: #bed640 8px solid; padding: 30px 0 0 5px;}
+
+.headerMenu {float: left; width: 758px; height: 100px; border-bottom: #bed640 8px solid; margin: 0 8px;}
+.headerMenu h1 {float: right; color: #333; font: normal 18px Arial, Helvetica, sans-serif; margin: 25px 10px 0 0;}
+.headerMenu a {float: right; clear: right; color: #bed640; font-size: 16px; margin: 20px 14px 0 0;}
+
+
+/*Dropdown css menu*/
+.headerMenu #quicklinks, #quicklinks ul {float: right; clear: right; padding: 0; margin: 10px 20px 0 0; list-style: none;}
+.headerMenu #quicklinks a {float: right; display: block; width: 240px; height: 19px; text-decoration: none; margin: 0;}
+.headerMenu #quicklinks a.linksBg {float: right; background-image: url(images/dropdown.jpg); color: #000; padding: 5px; font-size: 14px;}
+.headerMenu #quicklinks li {float: right; width: 230px;}
+.headerMenu #quicklinks li ul {position: absolute; width: 230px; left: -999em; margin-top: 30px; padding: 5px;}
+/*.headerMenu #quicklinks li:hover ul {left: auto;}*/
+/*IE fix - works with js*/
+.headerMenu #quicklinks li:hover ul, #quicklinks li.sfhover ul {left: auto;}
+.headerMenu #quicklinks li ul li {background-color: #000; border-bottom: #bed640 1px solid; height: 28px; margin-right: 25px;}
+.headerMenu #quicklinks li ul li a {float: left; text-decoration: none; color: #FFF;}
+
+#main {float: left; clear: left; width: 982px; height: auto; background: #000 url(images/left_banner.jpg) left top no-repeat;}
+
+#main ul {float: left; background-color: #FFF; margin: 0; padding: 0;}
+#main ul li {float: left; clear: left; height: 30px; width: 200px; padding: 1px 0 0 8px; font: normal 12px Arial, Helvetica, sans-serif; list-style: none;}
+#main ul li a {display: block; height: 25px; text-decoration: none; color: #000; border-bottom: #999 1px dotted; padding: 5px 0 0 2px;}
+#main ul li a:hover {background-color: #bed640; font: bold 12px Arial, Helvetica, sans-serif; padding-left: 15px; border-bottom: none;}
+
+#main ul li.extras {margin: 0; padding: 0; width: 208px; height: 70px; background-color: #000;}
+#main ul li.extras a {background-color: #000; border: none; color: #bed640; padding: 10px 20px; height: 15px;}
+#main ul li.extras a:hover {font-weight: normal; background-color: #000;}
+#main ul li.extras p {font-size: 11px; background-color: #000; color: #FFF; margin: 0 20px;}
+
+/*IE6 and FF display*/
+#main ul li.fb-extra a.facebook-link {float: left; width: 153px; height: 43px; background: url(images/button-gradient.gif) repeat-x; z-index: 0; border: #000 1px solid; margin: 20px 0 0 20px;}
+#main ul li.fb-extra a.facebook-link img {float: left; margin: -3px 1px 1px 10px;}
+#main ul li.fb-extra a.facebook-link p {float: left; width: 90px; margin: 3px 5px; font: normal 12px Arial, Helvetica, sans-serif;}
+/*end*/
+
+#main ul li.fb-extra {float: left; margin: 0; padding: 0; width: 208px; height: auto; background-color: #000;}
+#main ul li.fb-extra .facebook {float: left; clear: left; width: 30px; margin-top: 15px;}
+#main ul li.fb-extra .facebook img {/*float: left;*/display: absolute; /*margin: -68px -45px 0 0;*/margin: -105px 0 0 0px; z-index: 1;}
+#main ul li.fb-extra .facebook a.facebook-link {float: left; width: 153px; height: 43px; background: url(images/button-gradient.gif) repeat-x; z-index: 0; border: #000 1px solid; margin: 50px 0 0 45px;}
+#main ul li.fb-extra .facebook a.facebook-link img {float: left; margin: -3px 1px 1px 10px;}
+#main ul li.fb-extra .facebook a.facebook-link p {float: left; width: 90px; margin: 3px 5px; font: normal 12px Arial, Helvetica, sans-serif;}
+
+#main .mainContent {float: left; clear: none; margin: 30px 0 0 0; background: url(images/battery_home01.jpg) no-repeat; width: 767px; height: auto;}
+
+.mainContent .picture {height: 356px;}
+.mainContent .picture .clock p {float: left; color: #FFF; font: bold 14px Arial, Helvetica, sans-serif; width: 300px; margin: 10px 35px;}
+.mainContent .picture .clock {float: right; background-image: url(images/clock.jpg); width: 365px; height: 123px; margin: 180px 0 0 0;}
+.mainContent .picture .clock #countdowncontainer2 {float: right; font: bold 14px Arial, Helvetica, sans-serif; color: #CCC; margin: 20px 65px 0 0;}
+
+#main .mainContent ul {float: left; margin: 0px 0 0 0; background: none; border-top: #000 1px solid; border-bottom: #999 4px solid;}
+#main .mainContent ul li {float: left; clear: none; width: 191px; height: 110px; background-color: #bed640; padding: 0;}
+#main .mainContent ul li.left {width: 193px;}
+#main .mainContent ul li a {border: none; border-left: #999 1px dotted; margin-top: 10px; padding-left: 15px; height: 80px;}
+#main .mainContent ul li a h4 {float: left; font: bold 16px Arial, Helvetica, sans-serif; margin: 0; width: 170px;}
+#main .mainContent ul li a p {float: left; clear: left; width: 150px;}
+#main .mainContent ul li img {float: right; margin: -40px 15px 0 0; border: none;}
+
+
+#main .mainContent .mainInfo {float: left; clear: left; color: #000; height: auto; width: 766px; background-color: #FFF; border-bottom: #999 4px solid; padding-bottom: 20px;}
+#main .mainContent .mainInfo .leftCol {float: left; height: auto; width: 382px; border-right: #999 1px dotted; margin-top: 15px;}
+#main .mainContent .mainInfo .leftCol h2 {font: bold 16px Arial, Helvetica, sans-serif; margin: 0px 15px;}
+#main .mainContent .mainInfo .leftCol ul {border: none;}
+#main .mainContent .mainInfo .leftCol ul li {border: none; margin: 0; width: 200px;}
+#main .mainContent .mainInfo .leftCol ul li a {margin: 0; border: none; width: 210px; height: auto;}
+#main .mainContent .mainInfo .leftCol ul li a:hover {background-color: #FFF;}
+
+
+#main .mainContent .mainInfo h1 {font: normal 16px Arial, Helvetica, sans-serif; margin: 0 0 0 15px;}
+#main .mainContent .mainInfo p {margin: 15px 0 0 15px;}
+#main .mainContent .mainInfo img {margin: 15px;}
+#main .mainContent .mainInfo #region {border-bottom: #999 1px dotted; margin: 5px 15px; height: 40px;}
+#main .mainContent .mainInfo #jumpMenu {margin: 5px 15px; width: 200px;}
+#main .mainContent .mainInfo ul {margin: 15px; border: none;}
+#main .mainContent .mainInfo ul li {float: left; clear: left; background: none; height: 20px;}
+
+
+#main .mainContent .mainInfo .rightCol {float: left; clear: none; margin: 15px 0; width: 300px;}
+#main .mainContent .mainInfo .rightCol h1 {font-weight: bold;}
+#main .mainContent .mainInfo .rightCol ul li {float: left; clear: none; width: 300px;}
+#main .mainContent .mainInfo .rightCol ul li {float: left; clear: left; height: 80px; width: 300px;}
+#main .mainContent .mainInfo .rightCol ul li a, .rightCol ul li a:hover {height: auto; margin: auto; padding: 0; border: 0; background-color:#FFF;}
+#main .mainContent .mainInfo .rightCol ul li a h2 {font: bold 14px Arial, Helvetica, sans-serif;}
+
+
+/*General page layout*/
+
+#mainPage {float: left; width: 766px;}
+
+#main .pageTitle {float: left; height: 100px; width: 765px; background-color: #bed640; margin: 31px 0 0 1px;}
+#main .pageTitle h1 {font-size: 26px; margin: 60px 0 0 15px;}
+
+#main .pageContent {float: left; background-color: #FFF; width: 765px; height: auto; margin-left: 1px; padding-bottom: 40px;}
+#main .pageContent p {float: left; clear: left; color: #666; margin: 15px; width: 700px;}
+#main .pageContent ul {float: left; clear: left; width: 700px;}
+#main .pageContent ul li {float: left; clear: left; width: 680px; height: auto; margin: 0 20px; border-top: #999 1px dotted; padding: 5px; display: inline;}
+#main .pageContent ul.sitemap li a {width: 400px;}
+#main .pageContent ul.sitemap li {width: 600px;}
+#main .pageContent ul li a {float: left; clear: left; width: 680px; height: auto; margin: 0; padding: 0; display: inline; border: none;}
+#main .pageContent ul li a:hover {background-color: #FFF; margin: 0; padding: 0;}
+#main .pageContent ul li a img {float: left;}
+#main .pageContent ul li a p {clear: none; width: 550px; margin-left: 15px;}
+#main .pageContent ul li a h1 {float: left; clear: none; font: normal 16px Arial, Helvetica, sans-serif; color: #000; margin: 5px 15px; width: 400px;}
+
+#main .pageContent h1 {float: left; clear: left; font: bold 16px Arial, Helvetica, sans-serif; margin: 10px 15px; width: 600px;}
+#main .pageContent h2 {float: left; clear: left; font: normal 16px Arial, Helvetica, sans-serif; margin: 10px; width: 600px;}
+
+#main .pageContent .colOne {float: left; display: inline; width: 350px; padding-left: 15px; margin-top: 15px; padding: 10px;}
+#main .pageContent .colOne img {float: left; clear: left; margin: 20px;}
+
+#main .pageContent .colTwo {float: left; clear: none; display: inline; width: 360px; border-left: #666 1px dotted; margin-top: 15px; padding: 10px 0 0 20px;}
+#main .pageContent .colTwo p, #main .pageContent .colOne p {width: 300px;}
+#main .pageContent .colTwo h2 {width: 300px}
+
+#main .pageContent .links {float: left; clear: left; display: inline; width: 650px; margin: 5px 25px;}
+#main .pageContent .links a {float: left; clear: none; width: 150px; height: 120px; margin: 0 6px; display: inline;}
+#main .pageContent .links a p {float: left; margin: 20px 0; width: 150px;}
+
+#main .pageContent .badge {float: left; clear: left; display: inline; width: 700px; margin: 0 30px;}
+#main .pageContent .badge h2 {float: left; clear: left;}
+#main .pageContent .badge img {float: left; clear: left; margin: 10px;}
+#main .pageContent .badge textarea {float: left; clear: none;}
+
+#main .pageContent #form {float: left; margin: 10px 15px;}
+
+#main .pageContent table {clear: left;}
+#main .pageContent table p {width: 100px;}
+
+#main .pageContent table.prices {float: left; display: inline; text-align: center; margin: 0 0 0 85px; width: 500px;}
+#main .pageContent table.prices p {font-weight: bold;}
+#main .pageContent table.prices tr.tableRow td {border-bottom: #999 1px solid; padding: 5px 0; color: #666; font-size: 14px;}
+
+#main .pageContent iframe, #main .pageContent #placeholder {margin: 0 35px;}
+
+#main .pageContent a.reg {float: left; clear: left; display: inline; width: 660px; border: #999 1px solid; margin: 10px 40px; padding: 5px;}
+#main .pageContent a.reg img {float: left; clear: none;}
+#main .pageContent a.reg h1 {float: left; clear: none; width: 400px; color: #000;}
+#main .pageContent a.reg:active {text-decoration: none;}
+ 
+#main .pageContent #form1 {float: left; margin-left: 40px;}
+#main .pageContent #form1 p {width: auto; margin: 0;}
+#main .pageContent #form1 table input {margin: 1px 0;}
+
+#main .pageContent a .email, #main .pageContent .phone {float: left; height: 90px; width: 360px; margin: 20px 0 0 20px;}
+#main .pageContent a .email {border-bottom: #999 1px dotted; text-decoration: none;}
+#main .pageContent a:hover .email {text-decoration: underline; color: #999;}
+#main .pageContent a .email h1 {font: bold 16px Arial, Helvetica, sans-serif; color: #000; margin: 0 15px;}
+#main .pageContent a .email p {margin: 10px 15px;}
+#main .pageContent .phone {clear: left;}
+#main .pageContent .phone h1 {margin: 0 15px;}
+#main .pageContent .address {float: right; clear: none; width: 300px; height: 200px; border-left: #999 1px dotted; margin: 20px 0 0 20px; display: inline; padding-left: 20px;}
+
+#main .pageContent ul.batteryCan li a:hover h2 {text-decoration: underline;}
+#main .pageContent ul.batteryCan li a img {}
+#main .pageContent ul.batteryCan li a h2 {clear: none; width: 400px; font: bold 16px Arial, Helvetica, sans-serif;}
+#main .pageContent ul.batteryCan li a p {width: 400px; margin: 2px 10px;}
+#main .pageContent ul.batteryCan li p a {margin: 5px 0; font-weight: bold;}
+#main .pageContent ul.batteryCan li p a:hover {text-decoration: underline;}
+
+/*#main .pageContent .containerOptions a {float: left; clear: left; width: 500px; height: auto; margin: 10px 0 0 10px;}
+#main .pageContent .containerOptions a div {float: left; width: 82px; height: 82px;}
+#main .pageContent .containerOptions a .counter {background-image: url(images/counter.jpg); }
+#main .pageContent .containerOptions a .small {background-image: url(images/small.jpg);}
+#main .pageContent .containerOptions a .large {background-image: url(images/large.jpg);}
+#main .pageContent .containerOptions a .outdoor {background-image: url(images/outdoor.jpg);}
+#main .pageContent .containerOptions h2 {float: left; clear: none; width: 400px; height: 22px; background-color: #CCC; margin: 28px 0 0 0;}
+*/
+
+#footer {float: left; clear: left; background-color: #bed640; width: 765px; height: 50px; margin-left: 1px;}
+#footer p {float: left; width: 330px; margin: 10px;}
+#footer ul, #main #footer ul {float: right; clear: none; margin: 10px 0; padding: 0; width: auto; border: none; background: none;}
+#footer ul li, #main #footer ul li {float: left; clear: none; height: 30px; width: 120px; text-align: center; color: #666;}
+#main #footer ul li a {height: 15px; margin: 0; color: #666; padding: 0; border: none; border-left: #999 1px dotted;}
+
+

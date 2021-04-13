@@ -1,0 +1,26 @@
+var batdumps =[
+{
+    "type": "Feature",
+    "properties": {
+        "Name": "Coockoo nest",
+        "Adress": "Whatever",
+        "Comment": "Lair Of Pain"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [41.0234,43.0015]
+    }
+}
+,
+{
+    "type": "Feature",
+    "properties": {
+        "Name": "National University",
+        "Adress": "Pain",
+        "Comment": "Something in the darkness pulled me deeper"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [41.0244,43.0035]
+    }	
+}];

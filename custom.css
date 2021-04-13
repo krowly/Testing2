@@ -1,0 +1,136 @@
+#mapid { height: 800px; width: 80%;margin-left: auto;
+  margin-right: auto;}
+body {background: url(/Testing2/images/StolenOne.jpg) repeat; margin: 0;}
+
+.cuscont {width: 80%;display: block;  margin-left: auto;
+  margin-right: auto;}
+
+.cuscont>.row{
+	min-height:100vh;
+}
+
+.row .cusleft .logo{float: left;
+background-color: #FFF;
+width: 100%;
+padding: 0 0 0 0px;
+margin: 0 0 0 0px;}
+ img {
+  width: 100%;
+  height: auto;
+} 
+
+.ccontent{
+	padding-bottom:75px;
+}
+.clbar
+{
+		background-color: #FFF;
+}
+.cusleft{
+	background-image: url("/Testing2/images/StolenTwo.jpg");
+	background-repeat: repeat-x;
+	background-color: black;
+	background-position: bottom;
+	background-size: 100% auto;
+	
+}
+
+.cusleft *{
+	background-color: #FFF;
+}
+.navbar-header .navbar-brand{
+	background-color: transparent;
+}
+
+
+#header-menu{
+    float: left;
+    clear: left;
+    height: 33px;
+    width: 100%;
+    padding: 0 0 0 0px;
+    margin: 0 0 0 0px;
+    background-color: #000;
+    border-bottom: #bed640 8px solid;
+}
+.phone{
+float: right;
+clear: right;
+color: #bed640;
+font-size: 16px;
+}
+.pageTitle {
+    float: left;
+    width: 100%;
+    background-color: #bed640;
+    border-top: 16px solid black;
+}
+.clbar .pageTitle h1 {
+    font-size: 26px;
+    margin: 60px 0 0 15px;
+}
+.mainstaff{
+	float: left;
+	background-color: #FFF;
+	width: 100%;
+	padding: 0 0 0 0px;
+	margin: 0 0 0 0px;}
+	
+#footer{
+	z-index:1000;
+    float: left;
+    background-color: #bed640;
+    height: 50px;
+	position: fixed;
+	width:67.9%;
+	bottom:0;
+}
+#footer *{
+	z-index:1000;
+}
+
+
+#footer p {
+
+    float: left;
+    width: 40%;
+    margin: 10px;
+}
+#footer ul {
+    float: right;
+    clear: none;
+    width: auto;
+    border: none;
+    background: none;
+}
+#footer ul li{
+	padding-left:10px;
+	padding-right:10px;
+}
+.image_link{
+	border:1px groove black;
+	width:150px;
+	height:150px;
+	display:inline-block;
+}
+.tarea{
+		display:inline-block;
+}
+.row .clink
+{
+	border:1px groove black;
+	border-radius:5px;
+	width:	;
+	margin:5px;
+	padding-left:0;
+	margin-left: auto;
+	margin-right: auto;}
+}
+.cbox{
+	height:100%;
+}
+.clbar ul { }
+.clbar ul li { padding: 1px 0 0 8px; border-bottom: #999 1px solid;min-height:40px;}
+.clbar ul li a {color: #000;text-decoration: none;width:100%}
+.clbar ul li:hover {background-color: #bed640;}
+.clbar ul li:hover a {background-color: #bed640; padding-left: 15px;border-bottom: none;}
