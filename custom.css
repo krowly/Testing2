@@ -1,4 +1,4 @@
-#mapid { height: 800px; width: 80%;margin-left: auto;
+#mapid { height: 750px; width: 80%;margin-left: auto;
   margin-right: auto;}
 
 body {background: url(/Testing2/images/StolenOne.jpg) repeat; margin: 0;}
@@ -28,10 +28,6 @@ body {background: url(/Testing2/images/StolenOne.jpg) repeat; margin: 0;}
 	--bs-gutter-x: 0;
 	margin: 0 0 0 0px;}
 
-.row>.mainstaff{
-	padding: 0 0 0 0px;
-
-}
 .mainstaff>.row{
 	--bs-gutter-x: 0;
 	margin: 0 0 0 0px;
@@ -113,7 +109,7 @@ font-size: 16px;
 
 #footer p {
     float: left;
-    width: 40%;
+    width: 100%;
     margin: 10px;
 }
 #footer ul {
@@ -148,7 +144,6 @@ font-size: 16px;
 {
 	border:1px groove black;
 	border-radius:5px;
-	width:	;
 	margin:10px;
 	padding-left:0;
 	margin-left: auto;
