@@ -8,9 +8,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1Ijoic2NhcnMiLCJhIjoiY2tqdHN6bDJjOGNkeDJ6bGdudWhzZ3RweCJ9.VQnPLd6-0ZwToBHHYjMr8Q'
 }).addTo(mymap);
 
-////Building Management Strategy Trains Survival 
-
-
+var lazybool = false;
 
 var batteryIcon = L.icon({
 	iconUrl : 'bat.png',
@@ -18,28 +16,24 @@ var batteryIcon = L.icon({
 );	
 
 mymap.on('click',function(e){
-/* var marker = L.marker(e.latlng,{icon:batteryIcon}).on('click', function(e){
-	var string = "<h6>PlaceName</h6><p>PlaceAdress like street and number</p><p>Phone Number</p>";
-	marker.bindPopup(string).openPopup();
-}
-);
- batmarkers.addLayer(marker); */
-var batAdd = {
-    "type": "Feature",
-    "properties": {
-        "Name": "",
-        "Adress": "",
-        "Comment": ""
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [e.latlng.lng,e.latlng.lat]
-    }
+	if(lazybool){
+		var batAdd = {
+			"type": "Feature",
+			"properties": {
+				"Name": "",
+				"Adress": "",
+				"Comment": ""
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [e.latlng.lng,e.latlng.lat]
+			}
 
- };
- 
-batdumps.push(batAdd);
-refr(); 
+		 };
+		 
+		batdumps.push(batAdd);
+		refr(); 
+	}
 })
 
 function download(filename, text) {
@@ -80,6 +74,21 @@ function onEachFeature(feature, layer) {
 		}});	
 		layer.bindPopup(ccc);
 }
+function onEachFeatureView(feature, layer) {
+
+		var ccc = document.createElement('form');
+		$.ajax({url: "/Testing2/Pages/elements/LPopElementView.html", success: function(result){
+			$(ccc).html(result);
+			$(".nfield",ccc).html(feature.properties.Name);
+			$(".afield",ccc).html(feature.properties.Adress);
+
+			if(feature.properties.Comment!='')
+			{
+				$("table",ccc).append('<tr><td>Комментарий:</td><td>'+feature.properties.Comment+'</td></tr>');
+			}
+		}});	
+		layer.bindPopup(ccc);
+}
 function pointToLayer(geoJsonPoint, latlng){
 	var options = {
 		icon:batteryIcon
@@ -88,11 +97,74 @@ function pointToLayer(geoJsonPoint, latlng){
 }
 
 
-var batGLAYER = L.geoJson(batdumps,{onEachFeature: onEachFeature, pointToLayer: pointToLayer});
+var batGLAYER = L.geoJson(batdumps,{onEachFeature: onEachFeatureView, pointToLayer: pointToLayer}).addTo(mymap);
 
 function refr(){
 	batGLAYER.clearLayers();
-	batGLAYER = L.geoJson(batdumps,{onEachFeature: onEachFeature, pointToLayer: pointToLayer});
-	batGLAYER.addTo(mymap);
+	batGLAYER = L.geoJson(batdumps,{onEachFeature: onEachFeature, pointToLayer: pointToLayer}).addTo(mymap);
 }
-refr();
+function refr2()
+{	
+	batGLAYER.clearLayers();
+	batGLAYER = L.geoJson(batdumps,{onEachFeature: onEachFeatureView, pointToLayer: pointToLayer}).addTo(mymap);
+}
+
+L.Control.Watermark = L.Control.extend({
+    onAdd: function(mymap) {
+        var img = L.DomUtil.create('form');
+		$.ajax({
+		url:"/Testing2/Pages/elements/MapControl.html",
+		success: function(result){
+			$(img).html(result);
+			$('input[type=radio][name=mapmode]',img).change(function(){
+					console.log(this.value);
+					if(this.value == 'mapedit'){
+						lazybool = true;
+						refr();
+					}
+					else if(this.value == 'mapview'){
+						lazybool = false;
+						refr2();
+					}
+			});
+		}});		
+		L.DomEvent.disableClickPropagation(img);
+        return img;
+    },
+
+    onRemove: function(mymap) {
+        // Nothing to do here
+    }
+});
+
+
+L.Control.Jajabutton = L.Control.extend({
+
+    onAdd: function(mymap) {
+        var img = L.DomUtil.create('button');
+		$(img).html("GeoJS");
+		L.DomEvent.disableClickPropagation(img);
+		L.DomEvent.on(img,'click',saveJ);
+        return img;
+    },
+    onRemove: function(mymap){
+        // Nothing to do here
+    },
+});
+
+
+
+
+setJaja = function(options)
+{
+	return new L.Control.Jajabutton(options);
+}
+
+L.control.watermark = function(opts) {
+    return new L.Control.Watermark(opts);
+}
+ 
+L.control.watermark({position: 'topright' }).addTo(mymap);
+var Jajabutton = setJaja({position: 'bottomleft'}).addTo(mymap);
+
+ 
