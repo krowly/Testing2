@@ -59,6 +59,7 @@ function onEachFeature(feature, layer) {
 			$(".nfield",ccc).val(feature.properties.Name);
 			$(".afield",ccc).val(feature.properties.Adress);
 			$(".cfield",ccc).val(feature.properties.Comment);
+
 			$(".cbrewrite",ccc).click(function(){
 				feature.properties.Name= $(".nfield",ccc).val();
 				feature.properties.Adress= $(".afield",ccc).val();
@@ -71,8 +72,8 @@ function onEachFeature(feature, layer) {
 				refr();
 			});
 
-		}});	
-		layer.bindPopup(ccc,{width:'auto'});
+		}});
+		layer.bindPopup(ccc,{maxWidth: "auto"});
 }
 function onEachFeatureView(feature, layer) {
 
@@ -87,7 +88,7 @@ function onEachFeatureView(feature, layer) {
 				$("table",ccc).append('<tr><td>Комментарий:</td><td>'+feature.properties.Comment+'</td></tr>');
 			}
 		}});	
-		layer.bindPopup(ccc,{width:'auto'});
+		layer.bindPopup(ccc,{maxWidth: "auto"});
 }
 function pointToLayer(geoJsonPoint, latlng){
 	var options = {
