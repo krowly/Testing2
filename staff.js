@@ -38,7 +38,7 @@ mymap.on('click',function(e){
 
 function download(filename, text) {
   var element = document.createElement('a');
-  element.setAttribute('href', 'data:json;charset=utf-8,' +encodeURIComponent('var batdumps='+text));
+  element.setAttribute('href', 'data:application/json;base64,' +encodeURIComponent('var batdumps='+text));
   element.setAttribute('download',filename+'.json');
   element.style.display = 'none';
   document.body.appendChild(element);
@@ -72,7 +72,7 @@ function onEachFeature(feature, layer) {
 			});
 
 		}});	
-		layer.bindPopup(ccc);
+		layer.bindPopup(ccc,{width:'auto'});
 }
 function onEachFeatureView(feature, layer) {
 
@@ -87,7 +87,7 @@ function onEachFeatureView(feature, layer) {
 				$("table",ccc).append('<tr><td>Комментарий:</td><td>'+feature.properties.Comment+'</td></tr>');
 			}
 		}});	
-		layer.bindPopup(ccc);
+		layer.bindPopup(ccc,{width:'auto'});
 }
 function pointToLayer(geoJsonPoint, latlng){
 	var options = {
