@@ -117,6 +117,7 @@ L.Control.Watermark = L.Control.extend({
 		url:"/Testing2/Pages/elements/MapControl.html",
 		success: function(result){
 			$(img).html(result);
+			$(img).css({"backgroundColor":'#FFF',"padding":"5px","border":"groove gray"});
 			$('input[type=radio][name=mapmode]',img).change(function(){
 					console.log(this.value);
 					if(this.value == 'mapedit'){

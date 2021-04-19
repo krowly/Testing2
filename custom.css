@@ -12,6 +12,14 @@ body {background: url(/Testing2/images/StolenOne.jpg) repeat; margin: 0;}
 	--bs-gutter-x: 0;
 }
 
+p{
+	text-indent: 20px;	
+	text-align: justify; 
+	padding-left: 20px;
+	padding-right:20px;
+}
+
+
 .row>.cusleft{
 	--bs-gutter-x: 0;
 	position:fixed;
@@ -54,7 +62,11 @@ margin: 0 0 0 0px;}
 	padding-top:10px;
 	padding-bottom:75px;
 }
-.row>.ccontent{
+.ccontent h2{
+	text-indent: 20px;	
+}
+.row .ccontent{
+	
 	padding-left:15px;
 	padding-right:15px;
 }
@@ -101,18 +113,21 @@ font-size: 16px;
 	position: fixed;
 	width:65%;
 	bottom:0;
+	display:flex;
 }
 #footer *{
 	z-index:1000;
 }
 
 
-#footer p {
+#footer p {	display:flex;
+
     float: left;
-    width: 100%;
     margin: 10px;
 }
 #footer ul {
+	display: block ruby;
+
     float: right;
     clear: none;
     width: auto;
@@ -122,6 +137,7 @@ font-size: 16px;
 
 }
 #footer ul li{
+
 	padding-left:10px;
 	padding-right:10px;
 }
@@ -149,6 +165,7 @@ font-size: 16px;
 	margin-left: auto;
 	margin-right: auto;}
 }
+
 .clbar ul { }
 .clbar ul a li{ padding: 5px 10%; border-bottom: #999 1px solid;min-height:40px;}
 .clbar ul a  {color: #000;text-decoration: none;width:100%}
